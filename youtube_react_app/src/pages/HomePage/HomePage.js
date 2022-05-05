@@ -29,6 +29,12 @@ const HomePage = () => {
   return (
     <div className="container">
       <h1>Home Page for {user.username}!</h1>
+      {videos &&
+        videos.map((video) => (
+          <p key={video.id}>
+            {video.user} {video.video_id} {video.text}
+          </p>
+        ))}
     </div>
   );
 };
